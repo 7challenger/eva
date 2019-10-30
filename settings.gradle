@@ -1,0 +1,11 @@
+rootProject.name = 'eva'
+
+include ':clients'
+project(':clients').projectDir = new File('./packages/clients')
+
+include ':master'
+project(':master').projectDir = new File('./packages/master')
+
+include ':workers'
+project(':workers').projectDir = new File('./packages/workers')
+

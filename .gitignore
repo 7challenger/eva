@@ -1,0 +1,13 @@
+.gradle/
+build/
+
+.bloop/
+.metals/
+target/
+bin/
+gradle/
+
+.vscode/
+.settings
+.classpath
+.project

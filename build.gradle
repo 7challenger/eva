@@ -1,0 +1,37 @@
+subprojects {
+  apply plugin: 'scala'
+  apply plugin: 'application'
+
+  repositories {
+    jcenter()
+  }
+
+  sourceSets {
+    main {
+      scala {
+        srcDirs = ['src']
+      }
+    }
+    test {
+      scala {
+        srcDirs = ['test']
+      }
+    }
+  }
+
+  dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.1'
+  }
+}
+
+project(':clients') {
+  mainClassName = 'clients.Clients'
+}
+
+project(':master') {
+  mainClassName = 'master.Master'
+}
+
+project(':workers') {
+  mainClassName = 'workers.Workers'
+}
